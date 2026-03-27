@@ -1,0 +1,323 @@
+﻿{
+    "risk_aversion":  0.2,
+    "projects":  [
+                     {
+                         "risk":  5.3333,
+                         "cost":  21,
+                         "prerequisites":  {
+
+                                           },
+                         "id":  "P01",
+                         "value":  27.5778
+                     },
+                     {
+                         "risk":  2,
+                         "cost":  24,
+                         "prerequisites":  {
+
+                                           },
+                         "id":  "P02",
+                         "value":  28.7246
+                     },
+                     {
+                         "risk":  2.3333,
+                         "cost":  10,
+                         "prerequisites":  {
+
+                                           },
+                         "id":  "P03",
+                         "value":  29.8512
+                     },
+                     {
+                         "risk":  2.6667,
+                         "cost":  13,
+                         "prerequisites":  {
+
+                                           },
+                         "id":  "P04",
+                         "value":  30.9932
+                     },
+                     {
+                         "risk":  3,
+                         "cost":  16,
+                         "prerequisites":  "P03",
+                         "id":  "P05",
+                         "value":  32.1854
+                     },
+                     {
+                         "risk":  3.3333,
+                         "cost":  19,
+                         "prerequisites":  {
+
+                                           },
+                         "id":  "P06",
+                         "value":  33.4594
+                     },
+                     {
+                         "risk":  3.6667,
+                         "cost":  22,
+                         "prerequisites":  {
+
+                                           },
+                         "id":  "P07",
+                         "value":  34.8415
+                     },
+                     {
+                         "risk":  4,
+                         "cost":  8,
+                         "prerequisites":  "P06",
+                         "id":  "P08",
+                         "value":  36.3517
+                     },
+                     {
+                         "risk":  4.3333,
+                         "cost":  11,
+                         "prerequisites":  {
+
+                                           },
+                         "id":  "P09",
+                         "value":  38.0016
+                     },
+                     {
+                         "risk":  4.6667,
+                         "cost":  14,
+                         "prerequisites":  "P05",
+                         "id":  "P10",
+                         "value":  39.7945
+                     },
+                     {
+                         "risk":  5,
+                         "cost":  17,
+                         "prerequisites":  "P09",
+                         "id":  "P11",
+                         "value":  41.7245
+                     },
+                     {
+                         "risk":  5.3333,
+                         "cost":  20,
+                         "prerequisites":  {
+
+                                           },
+                         "id":  "P12",
+                         "value":  43.7773
+                     },
+                     {
+                         "risk":  2,
+                         "cost":  23,
+                         "prerequisites":  {
+
+                                           },
+                         "id":  "P13",
+                         "value":  45.931
+                     },
+                     {
+                         "risk":  2.3333,
+                         "cost":  9,
+                         "prerequisites":  "P12",
+                         "id":  "P14",
+                         "value":  48.1573
+                     },
+                     {
+                         "risk":  2.6667,
+                         "cost":  12,
+                         "prerequisites":  "P10",
+                         "id":  "P15",
+                         "value":  50.4237
+                     },
+                     {
+                         "risk":  3,
+                         "cost":  15,
+                         "prerequisites":  {
+
+                                           },
+                         "id":  "P16",
+                         "value":  52.6948
+                     },
+                     {
+                         "risk":  3.3333,
+                         "cost":  18,
+                         "prerequisites":  "P15",
+                         "id":  "P17",
+                         "value":  54.9351
+                     },
+                     {
+                         "risk":  3.6667,
+                         "cost":  21,
+                         "prerequisites":  {
+
+                                           },
+                         "id":  "P18",
+                         "value":  57.1111
+                     },
+                     {
+                         "risk":  4,
+                         "cost":  24,
+                         "prerequisites":  {
+
+                                           },
+                         "id":  "P19",
+                         "value":  59.1931
+                     },
+                     {
+                         "risk":  4.3333,
+                         "cost":  10,
+                         "prerequisites":  [
+                                               "P18",
+                                               "P15"
+                                           ],
+                         "id":  "P20",
+                         "value":  61.1574
+                     },
+                     {
+                         "risk":  4.6667,
+                         "cost":  13,
+                         "prerequisites":  {
+
+                                           },
+                         "id":  "P21",
+                         "value":  62.9876
+                     },
+                     {
+                         "risk":  5,
+                         "cost":  16,
+                         "prerequisites":  {
+
+                                           },
+                         "id":  "P22",
+                         "value":  64.6755
+                     },
+                     {
+                         "risk":  5.3333,
+                         "cost":  19,
+                         "prerequisites":  "P21",
+                         "id":  "P23",
+                         "value":  66.222
+                     },
+                     {
+                         "risk":  2,
+                         "cost":  22,
+                         "prerequisites":  {
+
+                                           },
+                         "id":  "P24",
+                         "value":  67.6365
+                     },
+                     {
+                         "risk":  2.3333,
+                         "cost":  8,
+                         "prerequisites":  "P20",
+                         "id":  "P25",
+                         "value":  68.9369
+                     },
+                     {
+                         "risk":  2.6667,
+                         "cost":  11,
+                         "prerequisites":  "P24",
+                         "id":  "P26",
+                         "value":  70.1479
+                     },
+                     {
+                         "risk":  3,
+                         "cost":  14,
+                         "prerequisites":  {
+
+                                           },
+                         "id":  "P27",
+                         "value":  71.2999
+                     },
+                     {
+                         "risk":  3.3333,
+                         "cost":  17,
+                         "prerequisites":  {
+
+                                           },
+                         "id":  "P28",
+                         "value":  72.4272
+                     },
+                     {
+                         "risk":  3.6667,
+                         "cost":  20,
+                         "prerequisites":  "P27",
+                         "id":  "P29",
+                         "value":  73.5651
+                     },
+                     {
+                         "risk":  4,
+                         "cost":  23,
+                         "prerequisites":  "P25",
+                         "id":  "P30",
+                         "value":  74.7488
+                     },
+                     {
+                         "risk":  4.3333,
+                         "cost":  9,
+                         "prerequisites":  {
+
+                                           },
+                         "id":  "P31",
+                         "value":  76.0102
+                     },
+                     {
+                         "risk":  4.6667,
+                         "cost":  12,
+                         "prerequisites":  "P30",
+                         "id":  "P32",
+                         "value":  77.3767
+                     },
+                     {
+                         "risk":  5,
+                         "cost":  15,
+                         "prerequisites":  {
+
+                                           },
+                         "id":  "P33",
+                         "value":  78.869
+                     },
+                     {
+                         "risk":  5.3333,
+                         "cost":  18,
+                         "prerequisites":  {
+
+                                           },
+                         "id":  "P34",
+                         "value":  80.5
+                     },
+                     {
+                         "risk":  2,
+                         "cost":  21,
+                         "prerequisites":  [
+                                               "P33",
+                                               "P30"
+                                           ],
+                         "id":  "P35",
+                         "value":  82.274
+                     },
+                     {
+                         "risk":  2.3333,
+                         "cost":  24,
+                         "prerequisites":  {
+
+                                           },
+                         "id":  "P36",
+                         "value":  84.1865
+                     },
+                     {
+                         "risk":  2.6667,
+                         "cost":  10,
+                         "prerequisites":  {
+
+                                           },
+                         "id":  "P37",
+                         "value":  86.2241
+                     },
+                     {
+                         "risk":  3,
+                         "cost":  13,
+                         "prerequisites":  "P36",
+                         "id":  "P38",
+                         "value":  88.3659
+                     }
+                 ],
+    "name":  "pps_10",
+    "budget":  269
+}
