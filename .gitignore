@@ -209,3 +209,11 @@ __marimo__/
 # Benchmark artifacts
 **/results/*
 !**/results/.gitkeep
+_upstream/
+paretoinvest_nsgaii_example/data/financial_data/
+.tools/
+python-*.exe
+paretoinvest_nsgaii_example/resources/JMetal_Files/
+!paretoinvest_nsgaii_example/resources/JMetal_Files/.gitkeep
+paretoinvest_nsgaii_example/results/*
+!paretoinvest_nsgaii_example/results/.gitkeep

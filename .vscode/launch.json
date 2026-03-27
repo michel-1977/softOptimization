@@ -50,6 +50,16 @@
         "--repetitions",
         "2"
       ]
+    },
+    {
+      "name": "ParetoInvest NSGA-II Illustrative",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "paretoinvest_nsgaii_example.scripts.run_illustrative_example",
+      "args": ["--mode", "custom", "--keep-extracted"],  
+      "cwd": "${workspaceFolder}",
+      "python": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+      "console": "integratedTerminal"
     }
   ]
 }

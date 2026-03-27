@@ -1,2 +1,5 @@
-# This repository intentionally has no third-party runtime dependencies.
-# Installing from this file still standardizes environment setup in one shot.
+# Dependencies required for the ParetoInvest NSGA-II illustrative example.
+numpy==1.26.4
+pandas==2.2.3
+python-dateutil==2.9.0.post0
+matplotlib==3.8.4

@@ -4,6 +4,7 @@ Local repository with two reproducible optimization projects:
 
 1. `financial_sms_emoa/`: ParetoInvest implementation using SMS-EMOA for bi-objective portfolio optimization (maximize expected return, minimize portfolio variance).
 2. `project_brkga/`: PPSSolver implementation using BRKGA for constrained project portfolio selection.
+3. `paretoinvest_nsgaii_example/`: illustrative NSGA-II run wired to the official ParetoInvest upstream code/data artifacts for baseline comparison.
 
 Each project includes:
 
@@ -26,6 +27,12 @@ Run each project benchmark suite:
 ```powershell
 .venv\Scripts\python.exe financial_sms_emoa\scripts\run_benchmarks.py
 .venv\Scripts\python.exe project_brkga\scripts\run_benchmarks.py
+```
+
+Run the illustrative ParetoInvest NSGA-II example:
+
+```powershell
+.venv\Scripts\python.exe -m paretoinvest_nsgaii_example.scripts.run_illustrative_example
 ```
 
 Verify checksums:
