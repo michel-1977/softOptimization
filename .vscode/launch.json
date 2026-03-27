@@ -1,0 +1,55 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Financial Benchmarks",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "financial_sms_emoa.scripts.run_benchmarks",
+      "cwd": "${workspaceFolder}",
+      "python": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Financial Benchmarks (Quick)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "financial_sms_emoa.scripts.run_benchmarks",
+      "cwd": "${workspaceFolder}",
+      "python": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+      "console": "integratedTerminal",
+      "args": [
+        "--generations",
+        "50",
+        "--population",
+        "32"
+      ]
+    },
+    {
+      "name": "BRKGA Benchmarks",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "project_brkga.scripts.run_benchmarks",
+      "cwd": "${workspaceFolder}",
+      "python": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "BRKGA Benchmarks (Quick)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "project_brkga.scripts.run_benchmarks",
+      "cwd": "${workspaceFolder}",
+      "python": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+      "console": "integratedTerminal",
+      "args": [
+        "--generations",
+        "80",
+        "--population",
+        "60",
+        "--repetitions",
+        "2"
+      ]
+    }
+  ]
+}

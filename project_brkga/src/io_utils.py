@@ -23,7 +23,20 @@ class PPSInstance:
 
 
 def load_instance(path: str | Path) -> PPSInstance:
-    raw = json.loads(Path(path).read_text(encoding="utf-8"))
+    # PowerShell-generated JSON may include UTF-8 BOM on Windows.
+    raw = json.loads(Path(path).read_text(encoding="utf-8-sig"))
+
+    def normalize_prerequisites(value: object) -> tuple[str, ...]:
+        if value is None:
+            return ()
+        if isinstance(value, str):
+            return (value,)
+        if isinstance(value, list):
+            return tuple(str(dep) for dep in value)
+        if isinstance(value, dict):
+            # Empty PowerShell hashtable from serialization of an empty array.
+            return ()
+        raise ValueError(f"Unsupported prerequisites value type: {type(value).__name__}")
 
     projects = tuple(
         Project(
@@ -31,7 +44,7 @@ def load_instance(path: str | Path) -> PPSInstance:
             cost=int(item["cost"]),
             value=float(item["value"]),
             risk=float(item["risk"]),
-            prerequisites=tuple(str(dep) for dep in item.get("prerequisites", [])),
+            prerequisites=normalize_prerequisites(item.get("prerequisites", [])),
         )
         for item in raw["projects"]
     )

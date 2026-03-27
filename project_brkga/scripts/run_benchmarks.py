@@ -5,16 +5,12 @@ import argparse
 import csv
 import json
 import statistics
-import sys
 import time
 
 ROOT = Path(__file__).resolve().parents[1]
-SRC = ROOT / "src"
-if str(SRC) not in sys.path:
-    sys.path.insert(0, str(SRC))
 
-from io_utils import load_instance
-from pps_brkga import run_brkga, solution_to_dict
+from project_brkga.src.io_utils import load_instance
+from project_brkga.src.pps_brkga import run_brkga, solution_to_dict
 
 
 def parse_args() -> argparse.Namespace:
@@ -34,7 +30,13 @@ def run_suite(args: argparse.Namespace) -> dict[str, object]:
     results_dir.mkdir(parents=True, exist_ok=True)
 
     summary_rows: list[dict[str, object]] = []
-    for instance_file in sorted(instances_dir.glob("pps_*.json")):
+    instance_files = sorted(instances_dir.glob("pps_*.json"))
+    if not instance_files:
+        raise FileNotFoundError(
+            f"No instance files matching 'pps_*.json' were found in: {instances_dir}"
+        )
+
+    for instance_file in instance_files:
         instance = load_instance(instance_file)
         runs: list[dict[str, object]] = []
         runtime_start = time.perf_counter()
@@ -116,7 +118,11 @@ def run_suite(args: argparse.Namespace) -> dict[str, object]:
 
 def main() -> None:
     args = parse_args()
-    payload = run_suite(args)
+    try:
+        payload = run_suite(args)
+    except Exception as exc:
+        print(json.dumps({"error": str(exc)}, indent=2))
+        raise
     print(json.dumps({"completed_instances": len(payload["instances"])}, indent=2))
 
 

@@ -25,14 +25,14 @@ function New-ProjectObject([int]$instanceId, [int]$projectId, [int]$projectCount
     if ($projectId -gt 6 -and (($projectId + $instanceId) % 5 -eq 0)) {
         $deps += ("P{0:d2}" -f ($projectId - 5))
     }
-    $deps = $deps | Select-Object -Unique
+    $deps = @($deps | Select-Object -Unique)
 
     return @{
         id = ("P{0:d2}" -f $projectId)
         cost = [int]$cost
         value = [double]$value
         risk = [double]$risk
-        prerequisites = $deps
+        prerequisites = @($deps)
     }
 }
 

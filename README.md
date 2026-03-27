@@ -15,11 +15,17 @@ Each project includes:
 
 ## Quick Start
 
+Create environment and install dependencies in one shot:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\setup_env.ps1
+```
+
 Run each project benchmark suite:
 
 ```powershell
-python financial_sms_emoa\scripts\run_benchmarks.py
-python project_brkga\scripts\run_benchmarks.py
+.venv\Scripts\python.exe financial_sms_emoa\scripts\run_benchmarks.py
+.venv\Scripts\python.exe project_brkga\scripts\run_benchmarks.py
 ```
 
 Verify checksums:

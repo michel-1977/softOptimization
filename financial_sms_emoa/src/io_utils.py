@@ -32,7 +32,8 @@ def _validate_square_matrix(matrix: list[list[float]], size: int) -> None:
 
 
 def load_instance(path: str | Path) -> PortfolioInstance:
-    raw = json.loads(Path(path).read_text(encoding="utf-8"))
+    # PowerShell-generated JSON may include UTF-8 BOM on Windows.
+    raw = json.loads(Path(path).read_text(encoding="utf-8-sig"))
     assets_raw = raw["assets"]
     assets = tuple(
         Asset(

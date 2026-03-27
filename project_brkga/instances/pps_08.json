@@ -4,54 +4,54 @@
                      {
                          "risk":  4,
                          "cost":  19,
-                         "prerequisites":  {
+                         "prerequisites":  [
 
-                                           },
+                                           ],
                          "id":  "P01",
                          "value":  26.6896
                      },
                      {
                          "risk":  4.3333,
                          "cost":  22,
-                         "prerequisites":  {
+                         "prerequisites":  [
 
-                                           },
+                                           ],
                          "id":  "P02",
                          "value":  27.9765
                      },
                      {
                          "risk":  4.6667,
                          "cost":  8,
-                         "prerequisites":  {
+                         "prerequisites":  [
 
-                                           },
+                                           ],
                          "id":  "P03",
                          "value":  29.1778
                      },
                      {
                          "risk":  5,
                          "cost":  11,
-                         "prerequisites":  {
+                         "prerequisites":  [
 
-                                           },
+                                           ],
                          "id":  "P04",
                          "value":  30.3246
                      },
                      {
                          "risk":  5.3333,
                          "cost":  14,
-                         "prerequisites":  {
+                         "prerequisites":  [
 
-                                           },
+                                           ],
                          "id":  "P05",
                          "value":  31.4512
                      },
                      {
                          "risk":  2,
                          "cost":  17,
-                         "prerequisites":  {
+                         "prerequisites":  [
 
-                                           },
+                                           ],
                          "id":  "P06",
                          "value":  32.5932
                      },
@@ -68,114 +68,126 @@
                      {
                          "risk":  2.6667,
                          "cost":  23,
-                         "prerequisites":  {
+                         "prerequisites":  [
 
-                                           },
+                                           ],
                          "id":  "P08",
                          "value":  35.0594
                      },
                      {
                          "risk":  3,
                          "cost":  9,
-                         "prerequisites":  {
+                         "prerequisites":  [
 
-                                           },
+                                           ],
                          "id":  "P09",
                          "value":  36.4415
                      },
                      {
                          "risk":  3.3333,
                          "cost":  12,
-                         "prerequisites":  "P08",
+                         "prerequisites":  [
+                                               "P08"
+                                           ],
                          "id":  "P10",
                          "value":  37.9517
                      },
                      {
                          "risk":  3.6667,
                          "cost":  15,
-                         "prerequisites":  {
+                         "prerequisites":  [
 
-                                           },
+                                           ],
                          "id":  "P11",
                          "value":  39.6016
                      },
                      {
                          "risk":  4,
                          "cost":  18,
-                         "prerequisites":  "P07",
+                         "prerequisites":  [
+                                               "P07"
+                                           ],
                          "id":  "P12",
                          "value":  41.3945
                      },
                      {
                          "risk":  4.3333,
                          "cost":  21,
-                         "prerequisites":  "P11",
+                         "prerequisites":  [
+                                               "P11"
+                                           ],
                          "id":  "P13",
                          "value":  43.3245
                      },
                      {
                          "risk":  4.6667,
                          "cost":  24,
-                         "prerequisites":  {
+                         "prerequisites":  [
 
-                                           },
+                                           ],
                          "id":  "P14",
                          "value":  45.3773
                      },
                      {
                          "risk":  5,
                          "cost":  10,
-                         "prerequisites":  {
+                         "prerequisites":  [
 
-                                           },
+                                           ],
                          "id":  "P15",
                          "value":  47.531
                      },
                      {
                          "risk":  5.3333,
                          "cost":  13,
-                         "prerequisites":  "P14",
+                         "prerequisites":  [
+                                               "P14"
+                                           ],
                          "id":  "P16",
                          "value":  49.7573
                      },
                      {
                          "risk":  2,
                          "cost":  16,
-                         "prerequisites":  "P12",
+                         "prerequisites":  [
+                                               "P12"
+                                           ],
                          "id":  "P17",
                          "value":  52.0237
                      },
                      {
                          "risk":  2.3333,
                          "cost":  19,
-                         "prerequisites":  {
+                         "prerequisites":  [
 
-                                           },
+                                           ],
                          "id":  "P18",
                          "value":  54.2948
                      },
                      {
                          "risk":  2.6667,
                          "cost":  22,
-                         "prerequisites":  "P17",
+                         "prerequisites":  [
+                                               "P17"
+                                           ],
                          "id":  "P19",
                          "value":  56.5351
                      },
                      {
                          "risk":  3,
                          "cost":  8,
-                         "prerequisites":  {
+                         "prerequisites":  [
 
-                                           },
+                                           ],
                          "id":  "P20",
                          "value":  58.7111
                      },
                      {
                          "risk":  3.3333,
                          "cost":  11,
-                         "prerequisites":  {
+                         "prerequisites":  [
 
-                                           },
+                                           ],
                          "id":  "P21",
                          "value":  60.7931
                      },
@@ -192,96 +204,108 @@
                      {
                          "risk":  4,
                          "cost":  17,
-                         "prerequisites":  {
+                         "prerequisites":  [
 
-                                           },
+                                           ],
                          "id":  "P23",
                          "value":  64.5876
                      },
                      {
                          "risk":  4.3333,
                          "cost":  20,
-                         "prerequisites":  {
+                         "prerequisites":  [
 
-                                           },
+                                           ],
                          "id":  "P24",
                          "value":  66.2755
                      },
                      {
                          "risk":  4.6667,
                          "cost":  23,
-                         "prerequisites":  "P23",
+                         "prerequisites":  [
+                                               "P23"
+                                           ],
                          "id":  "P25",
                          "value":  67.822
                      },
                      {
                          "risk":  5,
                          "cost":  9,
-                         "prerequisites":  {
+                         "prerequisites":  [
 
-                                           },
+                                           ],
                          "id":  "P26",
                          "value":  69.2365
                      },
                      {
                          "risk":  5.3333,
                          "cost":  12,
-                         "prerequisites":  "P22",
+                         "prerequisites":  [
+                                               "P22"
+                                           ],
                          "id":  "P27",
                          "value":  70.5369
                      },
                      {
                          "risk":  2,
                          "cost":  15,
-                         "prerequisites":  "P26",
+                         "prerequisites":  [
+                                               "P26"
+                                           ],
                          "id":  "P28",
                          "value":  71.7479
                      },
                      {
                          "risk":  2.3333,
                          "cost":  18,
-                         "prerequisites":  {
+                         "prerequisites":  [
 
-                                           },
+                                           ],
                          "id":  "P29",
                          "value":  72.8999
                      },
                      {
                          "risk":  2.6667,
                          "cost":  21,
-                         "prerequisites":  {
+                         "prerequisites":  [
 
-                                           },
+                                           ],
                          "id":  "P30",
                          "value":  74.0272
                      },
                      {
                          "risk":  3,
                          "cost":  24,
-                         "prerequisites":  "P29",
+                         "prerequisites":  [
+                                               "P29"
+                                           ],
                          "id":  "P31",
                          "value":  75.1651
                      },
                      {
                          "risk":  3.3333,
                          "cost":  10,
-                         "prerequisites":  "P27",
+                         "prerequisites":  [
+                                               "P27"
+                                           ],
                          "id":  "P32",
                          "value":  76.3488
                      },
                      {
                          "risk":  3.6667,
                          "cost":  13,
-                         "prerequisites":  {
+                         "prerequisites":  [
 
-                                           },
+                                           ],
                          "id":  "P33",
                          "value":  77.6102
                      },
                      {
                          "risk":  4,
                          "cost":  16,
-                         "prerequisites":  "P32",
+                         "prerequisites":  [
+                                               "P32"
+                                           ],
                          "id":  "P34",
                          "value":  78.9767
                      }

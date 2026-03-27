@@ -4,16 +4,17 @@ from pathlib import Path
 import argparse
 import csv
 import json
-import sys
 import time
 
 ROOT = Path(__file__).resolve().parents[1]
-SRC = ROOT / "src"
-if str(SRC) not in sys.path:
-    sys.path.insert(0, str(SRC))
 
-from io_utils import load_instance
-from paretoinvest_sms_emoa import build_reference_point, hypervolume_2d, run_sms_emoa, write_front_csv
+from financial_sms_emoa.src.io_utils import load_instance
+from financial_sms_emoa.src.paretoinvest_sms_emoa import (
+    build_reference_point,
+    hypervolume_2d,
+    run_sms_emoa,
+    write_front_csv,
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -32,7 +33,13 @@ def run_suite(args: argparse.Namespace) -> dict[str, object]:
     results_dir.mkdir(parents=True, exist_ok=True)
 
     rows: list[dict[str, object]] = []
-    for instance_file in sorted(instances_dir.glob("instance_*.json")):
+    instance_files = sorted(instances_dir.glob("instance_*.json"))
+    if not instance_files:
+        raise FileNotFoundError(
+            f"No instance files matching 'instance_*.json' were found in: {instances_dir}"
+        )
+
+    for instance_file in instance_files:
         instance = load_instance(instance_file)
         start = time.perf_counter()
         result = run_sms_emoa(
@@ -94,7 +101,11 @@ def run_suite(args: argparse.Namespace) -> dict[str, object]:
 
 def main() -> None:
     args = parse_args()
-    payload = run_suite(args)
+    try:
+        payload = run_suite(args)
+    except Exception as exc:
+        print(json.dumps({"error": str(exc)}, indent=2))
+        raise
     print(json.dumps({"completed_instances": len(payload["instances"])}, indent=2))
 
 
